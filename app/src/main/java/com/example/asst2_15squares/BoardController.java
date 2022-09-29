@@ -226,12 +226,12 @@ public class BoardController
 
         // square[0].setBackgroundColor(Color.GREEN);
 
-        if (square[0].getText() == "1"){
+        //if (square[0].getText() == "1"){
 
-            square[0].setBackgroundColor(Color.GREEN);
+        //    square[0].setBackgroundColor(Color.GREEN);
 
             //square[0].setBackgroundColor(0x73B617);
-        }
+        //}
 
         /*
         for (int i = 0; i < 5; i++) {
@@ -246,7 +246,7 @@ public class BoardController
 
         //    }
 
-           // v.invalidate();
+         //  v.invalidate();
 
         }
         */
@@ -258,13 +258,5 @@ public class BoardController
 
     }
 
-    private boolean outOfOrder(Button _butts, int i) {
-       if (_butts.toString() == "" + i){
-           return true;
-        }
-        else {
-            return false;
-        }
-    }
 }
 

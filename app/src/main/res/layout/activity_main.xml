@@ -14,17 +14,25 @@
         android:orientation="horizontal">
 
 
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:backgroundTint="#3949AB"
+            android:text="Reset"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <androidx.gridlayout.widget.GridLayout
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:forceDarkAllowed="false"
-                app:layout_row="0" />
+            android:layout_height="match_parent"
+            android:layout_weight="5">
 
             <Button
                 android:id="@+id/button1_1"
@@ -219,12 +227,6 @@
                 app:layout_row="4"
                 app:layout_rowWeight="5" />
 
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:forceDarkAllowed="false"
-                app:layout_column="5"
-                app:layout_row="5" />
 
         </androidx.gridlayout.widget.GridLayout>
 

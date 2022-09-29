@@ -14,16 +14,13 @@ public class Board {
         randomNums = new int[16];
     }
 
+    // set
     public void setRandomNums(Button[] arr, int[] randArr) {
         for (int i = 0; i < 16; i++) {
             if (randArr[i] == 16){ // Make square blank for game mechanics
                 arr[i].setText("");
             }
-            // else if(randArr[i] == 1){
-            //    String string1 = getString(R.string.one);
-            //    arr[i].setText(string1);
-            //arr[i].setBackgroundColor(Color.GREEN);
-            // }
+
             else {
                 arr[i].setText("" + randArr[i]);
             }
@@ -32,7 +29,7 @@ public class Board {
     }
 
     // Helper method to check if an array already contains a value
-    private boolean arrayContains(int[] array, int x) {
+    public boolean arrayContains(int[] array, int x) {
         for (int i = 0; i < 16; i++) {
             if (array[i] == x) {
                 return true;

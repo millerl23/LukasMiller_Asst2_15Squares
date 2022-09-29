@@ -8,17 +8,36 @@ public class BoardController
             implements View.OnClickListener{
 
     private Button[] square = new Button[16];
+    public Board board;
+
  
-    public BoardController(Button[] _square){
+    public BoardController(Button[] _square, Board _board){
         for (int i = 0; i < 16; i++){
             square[i] = _square[i];
         }
+        board = _board;
     }
 
 
     @Override
     public void onClick(View v)
     {
+        // Reset Button
+        if (v.getId() == R.id.reset){
+            // 1. Generate newly arrange random array
+            // 2. set square[i] text to this array in a loop
+            //int[] newRandArr = new int[16];
+
+            board.generateRandomArray(board.randomNums);
+            board.setRandomNums(board.buttons,board.randomNums);
+
+           // for (int i = 0; i < 16; i++){
+            //    square[i].setText("");
+           // }
+
+        }
+
+
 
         // 4 Corners, only check 2 values
         if (v.getId() == R.id.button1_1) { // Top Left Corner
@@ -222,39 +241,24 @@ public class BoardController
             }
         }
 
-
-
-        // square[0].setBackgroundColor(Color.GREEN);
-
-        //if (square[0].getText() == "1"){
-
-        //    square[0].setBackgroundColor(Color.GREEN);
-
-            //square[0].setBackgroundColor(0x73B617);
-        //}
-
-        /*
-        for (int i = 0; i < 5; i++) {
-            String num = ""+ i;
-           // if ( toString(num) == square[8]){
-
-           // }
-         //   if ( outOfOrder(square[i], i)) {
-
-                square[i].setBackgroundColor(0x73B617);
-
-
-        //    }
-
-         //  v.invalidate();
-
+        // Check all numbered squares for correctness
+        for (int i = 0; i < 16; i++){
+            int x = i + 1;
+            if ( square[i].getText().equals(""+x)){
+                square[i].setBackgroundColor(Color.argb(200,96,168,48));
+            }
+            else {
+                square[i].setBackgroundColor(Color.argb(100,221,150,150));
+            }
         }
-        */
 
-
-
-
-
+        // Check empty square for correctness
+        if ( square[15].getText().equals("")){
+            square[15].setBackgroundColor(Color.argb(200,96,168,48));
+        }
+        else {
+            square[15].setBackgroundColor(Color.argb(100,221,150,150));
+        }
 
     }
 

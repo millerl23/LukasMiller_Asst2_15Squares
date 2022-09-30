@@ -16,6 +16,7 @@ import java.util.Random;
     numbers in order 1-15 left -> right, top -> bottom, with the
     empty square in the bottom right corner.
     Tap on a square neighboring the empty square to swap positions.
+    Tap on the reset button to randomly rearrange numbers.
  */
 
 public class MainActivity extends AppCompatActivity {

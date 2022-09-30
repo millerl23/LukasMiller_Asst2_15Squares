@@ -9,6 +9,14 @@ import android.widget.TextView;
 
 import java.lang.reflect.Array;
 import java.util.Random;
+/*
+    15 Squares Game implementation by Lukas Miller
+    Completed on 9/29/2022
+    Rearrange squares to try to turn them all green by reorganizing
+    numbers in order 1-15 left -> right, top -> bottom, with the
+    empty square in the bottom right corner.
+    Tap on a square neighboring the empty square to swap positions.
+ */
 
 public class MainActivity extends AppCompatActivity {
 
